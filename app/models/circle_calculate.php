@@ -1,5 +1,15 @@
 <?php
 
+class Circle_data
+{
+
+    public $type;
+    public $radius;
+    public $surface;
+    public $circumference;
+
+}
+
 class Circle_Calculate
 {
     public $view_data;
@@ -12,6 +22,8 @@ class Circle_Calculate
     public function calculate()
     {
         if(isset($_GET['url'])) {
+
+            $circle = new Circle_data();
 
             $url = explode('/',filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL));
 

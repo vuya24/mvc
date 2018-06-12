@@ -1,4 +1,15 @@
 <?php
+class Triangle_data
+{
+
+    public $type;
+    public $a;
+    public $b;
+    public $c;
+    public $surface;
+    public $circumference;
+
+}
 
 class Triangle_Calculate
 {
@@ -14,7 +25,7 @@ class Triangle_Calculate
     {
         if(isset($_GET['url'])) {
 
-
+            $triangle = new Triangle_data();
             $url = explode('/',filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL));
 
             if($url[1] != NULL and $url[2] != NULL and $url[3] != NULL)  {

@@ -1,4 +1,25 @@
 <?php
+class geometry_Circle_data
+{
+
+    public $type;
+    public $r;
+    public $surface;
+    public $circumference;
+
+}
+
+class geometry_Triangle_data
+{
+
+    public $type;
+    public $a;
+    public $b;
+    public $c;
+    public $surface;
+    public $circumference;
+
+}
 
 class Geometry_Calculate
 {
@@ -16,6 +37,8 @@ class Geometry_Calculate
     public function calculate_circle()
     {
         if(isset($_GET['url'])) {
+
+            $circle = new geometry_Circle_data();
 
             $url = explode('/',filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL));
 
@@ -43,6 +66,7 @@ class Geometry_Calculate
     {
         if(isset($_GET['url'])) {
 
+            $triangle = new geometry_Triangle_data();
 
             $url = explode('/',filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL));
 
