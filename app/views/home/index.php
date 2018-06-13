@@ -2,7 +2,7 @@
 if (!empty($_POST['submit'])) {
 
 
-        header('Location: /mvc/public/geometry_calculator/'.$_POST['r'].'/'.$_POST['a'].'/'.$_POST['b'].'/'.$_POST['c']);
+        header('Location: /mvc-master/public/geometry_calculator/'.$_POST['r'].'/'.$_POST['a'].'/'.$_POST['b'].'/'.$_POST['c']);
         exit;
 }
 
